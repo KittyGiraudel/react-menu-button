@@ -20,14 +20,14 @@ There are 3 required properties for the menu-button component:
 const MenuButton = require('react-menu-button')
 
 const DifficultyMenu = (props) => (
-  <ReactMenuButton
+  <MenuButton
     id='difficulty'
     label='Difficulty'
   >
     <button type='button'>Easy</button>
     <button type='button'>Medium</button>
     <button type='button'>Hard</button>
-  </ReactMenuButton>
+  </MenuButton>
 )
 
 ReactDOM.render(
@@ -39,6 +39,8 @@ ReactDOM.render(
 More complex example using the inclusive-menu-button instance to programmatically use its API.
 
 ```jsx
+const MenuButton = require('react-menu-button')
+
 class DifficultyMenu extends React.Component {
   constructor (props) {
     super(props)
@@ -65,7 +67,7 @@ class DifficultyMenu extends React.Component {
     }
 
     return (
-      <ReactMenuButton
+      <MenuButton
         id='difficulty'
         label={label}
         menuRef={this.saveMenuRef}
@@ -73,7 +75,7 @@ class DifficultyMenu extends React.Component {
         <button type='button'>Easy</button>
         <button type='button'>Medium</button>
         <button type='button'>Hard</button>
-      </ReactMenuButton>
+      </MenuButton>
     )
   }
 }
