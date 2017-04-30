@@ -1,0 +1,39 @@
+{
+  "name": "react-menu-button",
+  "version": "0.1.0",
+  "description": "A React component wrapper around inclusive-menu-button.",
+  "homepage": "https://github.com/HugoGiraudel/react-menu-button",
+  "main": "dist/index.js",
+  "keywords": [
+    "menu",
+    "menu-button",
+    "accessibility",
+    "a11y",
+    "dropdown",
+    "react",
+    "component"
+  ],
+  "author": "Hugo Giraudel (http://hugogiraudel.com)",
+  "files": [
+    "src/index.js",
+    "dist/index.js"
+  ],
+  "scripts": {
+    "lint": "standard src/index.js",
+    "build": "jsx src/index.js > dist/index.js",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HugoGiraudel/react-a11y-dialog/"
+  },
+  "devDependencies": {
+    "react-tools": "^0.13.3",
+    "standard": "^10.0.2"
+  },
+  "dependencies": {
+    "create-react-class": "^15.5.2",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4"
+  }
+}
