@@ -42,6 +42,7 @@ const MenuButton = createReactClass({
   toggle: function () { this.menu.toggle() },
   close: function () { this.menu.close() },
   open: function () { this.menu.open() },
+  off: function () { this.menu.off() },
   on: function () { this.menu.on() },
 
   render: function () {
