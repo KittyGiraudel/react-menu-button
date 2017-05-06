@@ -16,11 +16,14 @@ const MenuButton = createReactClass({
     // of InclusiveMenuButton so that it can be programmatically accessed later
     // on.
     // E.g.: menuRef={(instance) => (this.menu = instance)}
-    menuRef: PropTypes.func
+    menuRef: PropTypes.func,
+
+    // An object to pass to the constructor of InclusiveMenuButton.
+    options: PropTypes.object
   },
 
   componentDidMount: function () {
-    this.menu = this.menu || new InclusiveMenuButton(this.buttonNode)
+    this.menu = this.menu || new InclusiveMenuButton(this.buttonNode, this.props.options)
     this.passMenuRef(this.menu)
   },
 
