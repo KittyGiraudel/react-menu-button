@@ -82,3 +82,13 @@ class DifficultyMenu extends React.Component {
   }
 }
 ```
+
+## Inclusive-menu-button constructor options
+
+In [version 0.1.1](https://github.com/Heydon/inclusive-menu-button/releases/tag/v0.1.1), inclusive-menu-button introduced an optional object as second argument for its constructor to define settings for the menu instance. This object can be passed as an `options` prop.
+
+```jsx
+<MenuButton … options={{ checkable: 'many' }}>
+  …
+</MenuButton>
+```
