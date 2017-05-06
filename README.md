@@ -18,6 +18,8 @@ There are 3 required properties for the menu-button component:
 
 ## Examples
 
+Play with examples in the [storybook playground](https://hugogiraudel.github.com/react-menu-button).
+
 ```jsx
 const MenuButton = require('react-menu-button')
 
