@@ -1,6 +1,6 @@
 {
   "name": "react-menu-button",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React component wrapper around inclusive-menu-button.",
   "homepage": "https://github.com/HugoGiraudel/react-menu-button",
   "main": "dist/index.js",
