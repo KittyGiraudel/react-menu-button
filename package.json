@@ -22,7 +22,10 @@
     "lint": "standard src/index.js",
     "build": "babel src/index.js > dist/index.js",
     "test": "jest src/test.js",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
     "type": "git",
@@ -35,7 +38,8 @@
     "babel-preset-react": "^6.24.1",
     "jest": "^20.0.0",
     "react-dom": "^15.5.4",
-    "standard": "^10.0.2"
+    "standard": "^10.0.2",
+    "@kadira/storybook": "^2.21.0"
   },
   "dependencies": {
     "inclusive-menu-button": "^0.1.1",
