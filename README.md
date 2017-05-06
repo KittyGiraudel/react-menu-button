@@ -8,13 +8,15 @@ react-menu-button is a React component for [inclusive-menu-button](https://githu
 npm install --save react-menu-button
 ```
 
-## Example
+## Usage
 
 There are 3 required properties for the menu-button component:
 
 - `id`: the `id` attribute used internally by inclusive-menu-button to connect the button element and its menu.
 - `label`: the text content for the button element.
 - `children`: children to be rendered as the content of the menu (they should render `<button>` elements).
+
+## Examples
 
 ```jsx
 const MenuButton = require('react-menu-button')
