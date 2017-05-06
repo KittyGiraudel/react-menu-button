@@ -22,11 +22,6 @@ var MenuButton = function (_React$Component) {
 
     _this.saveButtonRef = _this.saveButtonRef.bind(_this);
     _this.passMenuRef = _this.passMenuRef.bind(_this);
-    _this.toggle = _this.toggle.bind(_this);
-    _this.close = _this.close.bind(_this);
-    _this.open = _this.open.bind(_this);
-    _this.off = _this.off.bind(_this);
-    _this.on = _this.on.bind(_this);
     return _this;
   }
 
@@ -53,31 +48,6 @@ var MenuButton = function (_React$Component) {
     key: 'saveButtonRef',
     value: function saveButtonRef(ref) {
       this.buttonNode = ref;
-    }
-  }, {
-    key: 'toggle',
-    value: function toggle() {
-      this.menu.toggle();
-    }
-  }, {
-    key: 'close',
-    value: function close() {
-      this.menu.close();
-    }
-  }, {
-    key: 'open',
-    value: function open() {
-      this.menu.open();
-    }
-  }, {
-    key: 'off',
-    value: function off() {
-      this.menu.off();
-    }
-  }, {
-    key: 'on',
-    value: function on() {
-      this.menu.on();
     }
   }, {
     key: 'render',
