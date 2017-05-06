@@ -1,54 +1,36 @@
 const React = require('react')
 const PropTypes = require('prop-types')
-const createReactClass = require('create-react-class')
 const InclusiveMenuButton = require('inclusive-menu-button')
 
-const MenuButton = createReactClass({
-  propTypes: {
-    // The HTML `id` attribute of the button element, internally used by
-    // inclusive-menu-button to connect it to the menu.
-    id: PropTypes.string.isRequired,
+class MenuButton extends React.Component {
+  constructor (props) {
+    super(props)
 
-    // The text used for the button element.
-    label: PropTypes.string.isRequired,
+    this.saveButtonRef = this.saveButtonRef.bind(this)
+    this.passMenuRef = this.passMenuRef.bind(this)
+  }
 
-    // A function called when the component has mounted, receiving the instance
-    // of InclusiveMenuButton so that it can be programmatically accessed later
-    // on.
-    // E.g.: menuRef={(instance) => (this.menu = instance)}
-    menuRef: PropTypes.func,
-
-    // An object to pass to the constructor of InclusiveMenuButton.
-    options: PropTypes.object
-  },
-
-  componentDidMount: function () {
+  componentDidMount () {
     this.menu = this.menu || new InclusiveMenuButton(this.buttonNode, this.props.options)
     this.passMenuRef(this.menu)
-  },
+  }
 
-  componentWillUnmount: function () {
+  componentWillUnmount () {
     this.menu = null
     this.passMenuRef(undefined)
-  },
+  }
 
-  passMenuRef: function (ref) {
+  passMenuRef (ref) {
     if (typeof this.props.menuRef === 'function') {
       this.props.menuRef(ref)
     }
-  },
+  }
 
-  saveButtonRef: function (ref) {
+  saveButtonRef (ref) {
     this.buttonNode = ref
-  },
+  }
 
-  toggle: function () { this.menu.toggle() },
-  close: function () { this.menu.close() },
-  open: function () { this.menu.open() },
-  off: function () { this.menu.off() },
-  on: function () { this.menu.on() },
-
-  render: function () {
+  render () {
     return (
       <div className={this.props.className}>
         <button
@@ -66,6 +48,24 @@ const MenuButton = createReactClass({
       </div>
     )
   }
-})
+}
+
+MenuButton.propTypes = {
+  // The HTML `id` attribute of the button element, internally used by
+  // inclusive-menu-button to connect it to the menu.
+  id: PropTypes.string.isRequired,
+
+  // The text used for the button element.
+  label: PropTypes.string.isRequired,
+
+  // A function called when the component has mounted, receiving the instance
+  // of InclusiveMenuButton so that it can be programmatically accessed later
+  // on.
+  // E.g.: menuRef={(instance) => (this.menu = instance)}
+  menuRef: PropTypes.func,
+
+  // An object to pass to the constructor of InclusiveMenuButton.
+  options: PropTypes.object
+}
 
 module.exports = MenuButton
