@@ -37,12 +37,15 @@ class MenuButton extends React.Component {
           ref={this.saveButtonRef}
           type='button'
           data-inclusive-menu-opens={this.props.id}
+          className={this.props.buttonClassName}
         >
           {this.props.label}
           <span aria-hidden='true'>▾</span>
         </button>
 
-        <div id={this.props.id}>
+        <div
+          id={this.props.id}
+          className={this.props.menuClassName}>
           {this.props.children}
         </div>
       </div>

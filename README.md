@@ -94,3 +94,11 @@ In [version 0.1.1](https://github.com/Heydon/inclusive-menu-button/releases/tag/
   …
 </MenuButton>
 ```
+
+## Styling and class names
+
+You can pass class names to the different parts of the menu button with props:
+
+* `className` for the wrapper
+* `buttonClassName` for the button
+* `menuClassName` for the menu

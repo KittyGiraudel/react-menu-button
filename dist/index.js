@@ -60,7 +60,8 @@ var MenuButton = function (_React$Component) {
           {
             ref: this.saveButtonRef,
             type: 'button',
-            'data-inclusive-menu-opens': this.props.id
+            'data-inclusive-menu-opens': this.props.id,
+            className: this.props.buttonClassName
           },
           this.props.label,
           React.createElement(
@@ -71,7 +72,9 @@ var MenuButton = function (_React$Component) {
         ),
         React.createElement(
           'div',
-          { id: this.props.id },
+          {
+            id: this.props.id,
+            className: this.props.menuClassName },
           this.props.children
         )
       );
