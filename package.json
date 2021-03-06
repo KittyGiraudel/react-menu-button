@@ -2,7 +2,7 @@
   "name": "react-menu-button",
   "version": "0.2.0",
   "description": "A React component wrapper around inclusive-menu-button.",
-  "homepage": "https://github.com/HugoGiraudel/react-menu-button",
+  "homepage": "https://github.com/KittyGiraudel/react-menu-button",
   "main": "dist/index.js",
   "keywords": [
     "menu",
@@ -13,7 +13,7 @@
     "react",
     "component"
   ],
-  "author": "Hugo Giraudel (http://hugogiraudel.com)",
+  "author": "Kitty Giraudel (https://kittygiraudel.com)",
   "files": [
     "src/index.js",
     "dist/index.js"
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/HugoGiraudel/react-a11y-dialog/"
+    "url": "https://github.com/KittyGiraudel/react-a11y-dialog/"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
